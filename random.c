@@ -13,7 +13,8 @@ int main(int argc, char *argv[]){
 		fprintf(stderr, "Usage : %s <number>\n", argv[0]);
 		return EXIT_FAILURE;
 	}
-
+	
+	// transform to integer
 	int max = atoi(argv[1]);
 	srand(time(NULL));
 	int res = random_int(max);
