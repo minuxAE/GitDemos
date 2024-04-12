@@ -12,6 +12,11 @@ int random_int(int max){
 	return rand() % max;
 }
 
+// Add Test function
+void say_hello(){
+	printf("Hello Git!\n");
+}
+
 // Main Function
 int main(int argc, char *argv[]){
 	if(argc!=2){
