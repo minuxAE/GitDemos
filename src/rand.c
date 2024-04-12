@@ -2,6 +2,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
+void init_rand(void){
+	srand(time(NULL));
+}
+
 // To generate random integer
 int random_int(int max){
 	return rand() % max;
