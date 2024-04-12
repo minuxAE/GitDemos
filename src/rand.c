@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
+// Use a better random generator
 void init_rand(void){
 	srand(time(NULL));
 }
