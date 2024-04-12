@@ -1,3 +1,4 @@
+#include <time.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -12,6 +13,7 @@ int main(int argc, char *argv[]){
 	}
 
 	int max = atoi(argv[1]);
+	srand(time(NULL));
 	int res = random_int(max);
 	printf("%d\n", res);
 
