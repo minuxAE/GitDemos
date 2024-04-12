@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// To generate random integer
 int random_int(int max){
 	return rand() % max;
 }
