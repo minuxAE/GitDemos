@@ -19,9 +19,10 @@ int main(int argc, char *argv[]){
 		return EXIT_FAILURE;
 	}
 	
+	init_rand(); // work on the Win11 OS
 	// transform to integer
 	int max = atoi(argv[1]);
-	srand(time(NULL));
+	// srand(time(NULL));
 	int res = random_int(max);
 	printf("%d\n", res);
 
