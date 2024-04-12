@@ -12,6 +12,11 @@ int random_int(int max){
 	return rand() * max / RAND_MAX;
 }
 
+// Add Test function
+void say_hello(){
+	printf("Hello Git!\n");
+}
+
 // Main Function
 int main(int argc, char *argv[]){
 	if(argc!=2){
@@ -19,9 +24,10 @@ int main(int argc, char *argv[]){
 		return EXIT_FAILURE;
 	}
 	
+	init_rand(); // work on the Win11 OS
 	// transform to integer
 	int max = atoi(argv[1]);
-	srand(time(NULL));
+	// srand(time(NULL));
 	int res = random_int(max);
 	printf("%d\n", res);
 
