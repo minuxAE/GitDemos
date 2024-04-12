@@ -7,6 +7,7 @@ int random_int(int max){
 	return rand() % max;
 }
 
+// Main Function
 int main(int argc, char *argv[]){
 	if(argc!=2){
 		fprintf(stderr, "Usage : %s <number>\n", argv[0]);
