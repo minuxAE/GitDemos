@@ -72,8 +72,11 @@ git log --graph # 图形化方式查看提交
 
 `git reset --hard HEAD^`
 
-`git reset --hard HEAD~1`
+`git reset --hard HEAD~1` 回到第一个提交
 
 `git reset --hard commit_id`
 
-返回到某一个版本：`git reflog`
+操作日志：`git reflog`
+
+# Checkout进阶和Stash
+
