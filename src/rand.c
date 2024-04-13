@@ -9,7 +9,7 @@ void init_rand(void){
 
 // To generate random integer
 int random_int(int max){
-	return rand() * max / RAND_MAX;
+	return (rand() + max) % RAND_MAX;
 }
 
 // Add Test function
@@ -23,13 +23,13 @@ int main(int argc, char *argv[]){
 		fprintf(stderr, "Usage : %s <number>\n", argv[0]);
 		return EXIT_FAILURE;
 	}
-	
+	say_hello(); // give a greeting
 	init_rand(); // work on the Win11 OS
 	// transform to integer
 	int max = atoi(argv[1]);
 	// srand(time(NULL));
 	int res = random_int(max);
-	printf("%d\n", res);
+	printf("The generated random number is %d\n", res);
 
 	return EXIT_SUCCESS;
 }
