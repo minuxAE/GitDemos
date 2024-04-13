@@ -1,5 +1,3 @@
-[ToC]
-
 # 简易案例
 
 版本库创建命令：`git init`
@@ -11,8 +9,6 @@
 编写测试文件`random.c`
 
 将文件添加到版本库中`git add random.c`
-
-<img src="/Users/minux/Documents/Git-Figures/git-status.png" alt="git-status" style="zoom:50%;" />
 
 向服务端提交代码文件: `git commit -a -m "xxx"`
 
