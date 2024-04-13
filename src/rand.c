@@ -9,7 +9,7 @@ void init_rand(void){
 
 // To generate random integer
 int random_int(int max){
-	return (rand() + max) % RAND_MAX;
+	return ((rand() % 1024) * max) % RAND_MAX;
 }
 
 // Add Test function
