@@ -80,3 +80,13 @@ git log --graph # 图形化方式查看提交
 
 # Checkout进阶和Stash
 
+`git checkout -- <file>`丢弃当前文件的修改，返回到暂存区中的版本
+
+`git restore <file>`等效
+
+`git reset HEAD <file>` 从暂存区中取消暂存，移动到工作区
+
+
+
+
+
