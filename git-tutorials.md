@@ -129,7 +129,7 @@ git log refs/remotes/origin/main
 
 本地分支的信息存储在`.git/refs/heads`下
 
-远程分支信息存储在`.git/refs/remote`下
+远程分支信息存储在`.git/refs/remotes`下
 
 将远程main分支拉取到本地远程库的mymain分支下：
 
