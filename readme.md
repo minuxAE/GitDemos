@@ -114,3 +114,29 @@ git log --graph # 图形化方式查看提交
 
 查看文件修改信息：`git blame <file>`
 
+## git diff
+
+比较暂存区和工作区文件的差别
+
+`git diff HEAD` 比较工作区与最新提交的差别
+
+`git diff --cached commit_id` 暂存区和最新的提交的之间的差别
+
+# 远程和Github
+
+`pull = fetch + merge`, 拉取，同时会执行`merge`
+
+`GitLab`内网搭建所用
+
+# Git应用开发
+
+基于Git分支开发模型：
+
+1.`develop`分支（频繁变化的分支）
+
+2.`test`分支（测试分支，变化不是很频繁）
+
+3.`main`分支（发布分支）
+
+4.`bugfix`分支（热备份、修复分支）
+
