@@ -86,4 +86,19 @@ git log --graph # 图形化方式查看提交
 
 `git reset HEAD <file>` 从暂存区中取消暂存，移动到工作区
 
+`git checkout`切换到分支的最新提交点，也可以回到旧的提交点，例如`git checkout 937f3`
+
+`git stash`将当前的分支的修改临时保存起来
+
+`git stash list`查看所有的保存状态
+
+`git stash pop`将临时状态恢复并从列表中删除
+
+`git stash apply`将临时状态恢复但是不从列表中删除该状态
+
+`git stash drop stash@{0}` 删除之前保存的状态
+
+`git stash apply stash@{1}`恢复之前保存的状态
+
+# 标签与diff
 
