@@ -57,5 +57,11 @@ alias git='LANG=en_GB git' # 英文界面
 
 ![gitk](figures/gitk.png)
 
+`gitk`也可以修改为英文界面：`alias gitk='LANG=en_GB gitk'`
+
+刷新配置文件：`source ~/.bash_profile`
+
+输入命令`git gui`可以打开GUI管理界main
+
 
 
