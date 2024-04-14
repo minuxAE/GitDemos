@@ -69,6 +69,18 @@ alias git='LANG=en_GB git' # 英文界面
 
 `git config --global alias.ui '!gitk'` 对外部命令添加别名， 执行`git ui`相当于执行`gitk`
 
+创建对应远程分支的命令：`git checkout -b dev origin/dev`,  该操作在本地创建了分支`dev`，且追踪远程`orgin/dev`分支
+
+本地分支建立追踪关系：`git push -u origin test`
+
+设定远程分支追踪：`git checkout --track origin/test`
+
+删除远程分支
+
+方法1:`git push origin :dev`(将空分支推送到远程)
+
+方法2:`git push origin --delete dev`
+
 
 
 
