@@ -102,3 +102,15 @@ git log --graph # 图形化方式查看提交
 
 # 标签与diff
 
+标签有两种：轻量级标签（lightweight）和带有附注的标签（annotated）
+
+创建一个轻量级标签：`git tag v1.0.1`
+
+创建一个带有附注的标签：`git tag -a v1.0.2 -m 'release version'`
+
+删除标签：`git tag -d <tag_name>`
+
+## git blame
+
+查看文件修改信息：`git blame <file>`
+
