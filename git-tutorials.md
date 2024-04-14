@@ -55,7 +55,7 @@ alias git='LANG=en_GB git' # 英文界面
 
 使用命令`gitk`可以开启MAC中的GUI
 
-![gitk](/Users/minux/Desktop/minux_programs/Git/GitDemos/figures/gitk.png)
+![gitk](figures/gitk.png)
 
 
 
