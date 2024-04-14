@@ -87,6 +87,3 @@ git log --graph # 图形化方式查看提交
 `git reset HEAD <file>` 从暂存区中取消暂存，移动到工作区
 
 
-
-
-
