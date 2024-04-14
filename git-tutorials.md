@@ -36,7 +36,7 @@ HEAD branch: main
 
 `git fetch`只负责下载，不进行合并
 
-## gitk和git GUI
+## gitk和git gui
 
 MAC机器在默认`Xcode`中提供的`git`没有安装`gitk`, 需要更换为`homebrew`中安装的`git`
 
@@ -62,6 +62,14 @@ alias git='LANG=en_GB git' # 英文界面
 刷新配置文件：`source ~/.bash_profile`
 
 输入命令`git gui`可以打开GUI管理界main
+
+## git refspec
+
+`git config --global alias.xxx yyy` 对操作起一个别名
+
+`git config --global alias.ui '!gitk'` 对外部命令添加别名， 执行`git ui`相当于执行`gitk`
+
+
 
 
 
