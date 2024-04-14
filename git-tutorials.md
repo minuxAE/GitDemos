@@ -81,6 +81,78 @@ alias git='LANG=en_GB git' # 英文界面
 
 方法2:`git push origin --delete dev`
 
+如果本地分支和远程分支名字不一样
+
+```
+git push --set-upstream --set-upstream origin dev:dev2
+```
+
+推送时需要使用命令：`git push origin HEAD:dev2`
+
+或者使用：`git push origin dev:dev2`
+
+本地和远程同名分支推送：`git push --set-upstream origin dev` (本地和远程分支名字都是dev)
+
+`push`操作的完整命令：`git push origin src:dest`
+
+`pull`操作的完整命令：`git pull origin src:dest`
+
+`HEAD`指向当前所在分支的引用标识符，文件内部不包含`SHA-1`值，包含指向另一个引用的指针
+
+执行`git commit`时，会创建一个`commit`对象，并且将这个对象的`parent`指针设置为`HEAD`所指向的`SHA-1`值
+
+对于`HEAD`修改的操作会记录在`git reflog`中
+
+`ORIG_HEAD`记录了远程`HEAD`的`SHA-1`
+
+`FETCH_HEAD`记录了拉取代码
+
+### 标签
+
+`git push origin --tags`将本地所有标签推送到远程仓库
+
+远程标签删除：`git push origin --delete tag <version>`
+
+本地标签删除：`git tag -d <version>`
+
+本地标签推送到远程（完整语法）：`git push origin refs/tags/<version>:refs/tags/<version>`
+
+在缺省情况下，`refspec`会被`git remote add`命令自动生成，Git会获取远端上`refs/heads`下所有引用，并将他们写到本地的`refs/remote/origin`目录下
+
+查看远程main分支的历史记录：
+
+```
+git log origin/main
+git log remotes/origin/main
+git log refs/remotes/origin/main
+```
+
+本地分支的信息存储在`.git/refs/heads`下
+
+远程分支信息存储在`.git/refs/remote`下
+
+将远程main分支拉取到本地远程库的mymain分支下：
+
+```
+git fetch origin main:refs/remotes/origin/mymain
+```
+
+此时mymain分支处于stale状态，因为没有本地分支在track
+
+建立追踪远程分支mymain的本地分支：
+
+```
+git checkout --track origin/mymain
+```
+
+## git gc
+
+执行`git gc`可以将本地、远程、标签等信息压缩到`.git/packed-refs`中
+
+
+
+
+
 
 
 
