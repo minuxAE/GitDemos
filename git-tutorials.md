@@ -149,6 +149,24 @@ git checkout --track origin/mymain
 
 执行`git gc`可以将本地、远程、标签等信息压缩到`.git/packed-refs`中
 
+远程仓库名字修改：
+
+```
+git remote rename origin origin2
+```
+
+删除远程仓库
+
+```
+git remote rm origin
+```
+
+重新添加回来
+
+```
+git remote add origin git@github.com:xxx.git
+```
+
 
 
 
