@@ -27,7 +27,7 @@ HEAD branch: main
 
 远程推送：`git push`
 
-<img src="figures/git-status.png" alt="git-status" style="zoom:50%;" />
+<img src="figures/git-status.png" alt="git-status" style="zoom:70%;" />
 
 
 将本地的`main`和远程的`origin/main`进行同步
