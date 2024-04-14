@@ -27,7 +27,8 @@ HEAD branch: main
 
 远程推送：`git push`
 
-<img src="/Users/minux/Library/Application Support/typora-user-images/image-20240414124403296.png" alt="image-20240414124403296" style="zoom:50%;" />
+<img src="/Users/minux/Desktop/minux_programs/Git/GitDemos/figures/git-status.png" alt="git-status" style="zoom:50%;" />
+
 
 将本地的`main`和远程的`origin/main`进行同步
 
