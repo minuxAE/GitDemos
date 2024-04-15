@@ -167,6 +167,46 @@ git remote rm origin
 git remote add origin git@github.com:xxx.git
 ```
 
+## 裸库和submodule
+
+裸库是没有工作区的仓库，创建命令：`git init --bare`, 仅仅用来中转开发者的代码
+
+建立测试Repo：`GitMain`和`GitSub`
+
+将`GitSub`加入到`GitMain`的库中, 在`GitMain`端执行
+
+```
+git submodule add git@github.com:xxx/yyy.git <modulename>
+```
+
+`GitMain`中获取`GitSub`中的变化（已经推送到remote origin），进入`<modulename>`后执行`git pull`
+
+一次性获取所有子库的更新：`git submodule foreach git pull`
+
+新的开发者加入，执行`git clone`, 默认情况下不会`clone`子模块的代码
+
+手动添加子模块
+
+```
+cd <modulename>
+git submodule init # 注册子模块
+git submodule update --recursive # 递归更新
+```
+
+或者执行参数拷贝：`git clone git@github.com:xxx/yyy.git <reponame> --recursive`
+
+子模块删除
+
+先从暂存区中删除：`git rm --cached <modulename>`
+
+在本地执行`rm -rf <modulename> .gitmodules`
+
+提交并推送
+
+
+
+
+
 
 
 
