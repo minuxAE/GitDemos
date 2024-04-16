@@ -203,6 +203,73 @@ git submodule update --recursive # 递归更新
 
 提交并推送
 
+## Git Subtree
+
+创建`SubTree`的主工程和子工程（使用默认主分支命名：`master`）
+
+主工程中关联子工程：`git remote add subtree-origin <sub URL>`
+
+添加依赖：`git subtree add --prefix=subtree subtree-origin master`
+
+使用参数将多次提交合并：`git subtree add --prefix=subtree subtree-origin master --squash`
+
+拉取子工程的更新：`git subtree pull --prefix=subtree subtree-origin master --squash`
+
+等效命令：`git subtree pull -P subtree subtree-origin master --squash`
+
+* 如果在添加子工程时使用了`--squash`参数，那么在`pull`操作的时候也需要使用`--squash`参数，相关issue参见[fatal refusing in subtree](https://stackoverflow.com/questions/39281079/git-subtree-error-fatal-refusing-to-merge-unrelated-histories)，git合并执行的原则为"三方合并"，如果在开始使用了`--squash`参数，后面的步骤都需要使用`--squash`参数。
+
+在主工程中更新`<submodule>`中的内容，然后推回到子工程中
+
+1. 在`subtree/<filename>`进行文件内容修改
+2. 推送到远程仓库
+3. 推送到子工程：`git subtree push -P subtree subtree-origin master`
+4. 子工程从远程仓库中拉取更新
+
+功能模块提取，使用`split`
+
+## Git cherry-pick & Rebase
+
+将某个分支的修改应用到其他分支上：`git cherry-pick <commit_id>`
+
+变基、衍合：`rebase`, 功能类似于`merge`, 改变分支的根基
+
+```
+git checkout <work>
+git rebase <origin>
+```
+
+会修改git的提交list
+
+- rebase过程中也会出现冲突
+- 冲突解决后，使用`git add`添加，然后执行：`git rebase --continue`
+- rebase操作可以在任何时候被终止，分支会恢复到rebase开始前的状态，`git rebase --abort`
+
+- 一般不会对master分支执行rebase操作，容易引发问题
+- rebase一般应用在本地分支，没有推送到远程仓库
+
+在本地建立repo，设置两个分支`test`和`dev`
+
+在dev分支执行rebase操作，test分支的内容将以patch的形式发布到dev分支，整个流程将会**变成一条直线**
+
+执行`git rebase --abort`丢弃变基操作
+
+rebase遇到冲突的时候，可以进行手动解决，然后使用`git rebase --continue`继续执行变基操作
+
+也可以使用`git rebase --skip`跳过patch
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
